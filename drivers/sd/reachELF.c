@@ -53,7 +53,7 @@ u32 readbytes(u32 addr, u32 bytesz)
 void reach_ELF() {
 	uart_spin_puts("Now in reach_EFL.\r\n");
 
-	u32 LBA = readbytes(MBR_BASE + 0x1b6, 4);
+	u32 LBA = readbytes(MBR_BASE + 0x1d6, 4);
 	u32 elf_base = 0x100200; //1.5M
 	sd_dma_spin_read(elf_base, 1, LBA);
 	
