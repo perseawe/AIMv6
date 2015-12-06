@@ -1,4 +1,4 @@
-ENTRY(mbr)
+ENTRY(mbr_bootmain)
 
 MEMORY
 {

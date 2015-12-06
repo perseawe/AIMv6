@@ -1,10 +1,10 @@
-ENTRY(mbr)
+ENTRY(mbr_bootmain)
 
 MEMORY
 {
 	MBR (rwx) :
-		ORIGIN = 1M,
-		LENGTH = 446
+		ORIGIN = 0x100000,
+		LENGTH = 512
 }
 
 SECTIONS

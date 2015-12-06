@@ -1,10 +1,10 @@
-ENTRY(mbr)
+ENTRY(start_kernel)
 
 MEMORY
 {
-	MBR (rwx) :
-		ORIGIN = 1M,
-		LENGTH = 446
+	Kern (rwx) :
+		ORIGIN = 2M,
+		LENGTH = 10M
 }
 
 SECTIONS

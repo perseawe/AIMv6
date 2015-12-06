@@ -35,6 +35,7 @@ LDFLAGS		=  -EL -O -N
 FIRMWARE_OBJS	=  firmware/arch/$(ARCH)/vector.o \
 		   firmware/arch/$(ARCH)/bootasm.o \
 		   firmware/arch/$(ARCH)/bootmain.o \
+		   drivers/u32/u32.o \
 		   drivers/serial/uart-zynq7000.o \
 		   drivers/serial/uart.o \
 		   drivers/clock/gtc-a9mpcore.o \

@@ -1,0 +1,112 @@
+ELF 头：
+  Magic：  7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (可执行文件)
+  Machine:                           ARM
+  Version:                           0x1
+  入口点地址：              0x1ff00000
+  程序头起点：              52 (bytes into file)
+  Start of section headers:          69264 (bytes into file)
+  标志：             0x5000202, has entry point, Version5 EABI, soft-float ABI
+  本头的大小：       52 (字节)
+  程序头大小：       32 (字节)
+  Number of program headers:         1
+  节头大小：         40 (字节)
+  节头数量：         9
+  字符串表索引节头： 6
+
+节头：
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .vector           PROGBITS        1ff00000 010000 000010 00  AX  0   0  4
+  [ 2] .text             PROGBITS        1ff00010 010010 0008c0 00  AX  0   0  4
+  [ 3] .rodata.str1.4    PROGBITS        1ff008d0 0108d0 00010c 01 AMS  0   0  4
+  [ 4] .ARM.attributes   ARM_ATTRIBUTES  00000000 0109dc 00002b 00      0   0  1
+  [ 5] .comment          PROGBITS        00000000 010a07 000011 01  MS  0   0  1
+  [ 6] .shstrtab         STRTAB          00000000 010a18 000051 00      0   0  1
+  [ 7] .symtab           SYMTAB          00000000 010a6c 000290 10      8  22  4
+  [ 8] .strtab           STRTAB          00000000 010cfc 000192 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+  I (info), L (link order), G (group), T (TLS), E (exclude), x (unknown)
+  O (extra OS processing required) o (OS specific), p (processor specific)
+
+There are no section groups in this file.
+
+程序头：
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x010000 0x1ff00000 0x1ff00000 0x009dc 0x009dc R E 0x10000
+
+ Section to Segment mapping:
+  段节...
+   00     .vector .text .rodata.str1.4 
+
+There is no dynamic section in this file.
+
+该文件中没有重定位信息。
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 41 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 1ff00000     0 SECTION LOCAL  DEFAULT    1 
+     2: 1ff00010     0 SECTION LOCAL  DEFAULT    2 
+     3: 1ff008d0     0 SECTION LOCAL  DEFAULT    3 
+     4: 00000000     0 SECTION LOCAL  DEFAULT    4 
+     5: 00000000     0 SECTION LOCAL  DEFAULT    5 
+     6: 00000000     0 FILE    LOCAL  DEFAULT  ABS firmware/arch/armv7a-le/v
+     7: 1ff00000     0 NOTYPE  LOCAL  DEFAULT    1 $a
+     8: 00000000     0 FILE    LOCAL  DEFAULT  ABS firmware/arch/armv7a-le/b
+     9: 1ff00010     0 NOTYPE  LOCAL  DEFAULT    2 $a
+    10: 1ff0001c     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    11: 00000000     0 FILE    LOCAL  DEFAULT  ABS bootmain.c
+    12: 1ff00020     0 NOTYPE  LOCAL  DEFAULT    2 $a
+    13: 1ff008d0     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    14: 00000000     0 FILE    LOCAL  DEFAULT  ABS uart-zynq7000.c
+    15: 1ff00194     0 NOTYPE  LOCAL  DEFAULT    2 $a
+    16: 00000000     0 FILE    LOCAL  DEFAULT  ABS uart.c
+    17: 1ff00264     0 NOTYPE  LOCAL  DEFAULT    2 $a
+    18: 00000000     0 FILE    LOCAL  DEFAULT  ABS gtc-a9mpcore.c
+    19: 1ff0028c     0 NOTYPE  LOCAL  DEFAULT    2 $a
+    20: 00000000     0 FILE    LOCAL  DEFAULT  ABS sd-zynq7000.c
+    21: 1ff003a8     0 NOTYPE  LOCAL  DEFAULT    2 $a
+    22: 1ff00204    20 FUNC    GLOBAL DEFAULT    2 uart_disable
+    23: 1ff007c0   136 FUNC    GLOBAL DEFAULT    2 sd_dma_spin_read
+    24: 1ff00240    36 FUNC    GLOBAL DEFAULT    2 uart_spin_putbyte
+    25: 1ff00338   112 FUNC    GLOBAL DEFAULT    2 usleep
+    26: 1ff001f0    20 FUNC    GLOBAL DEFAULT    2 uart_enable
+    27: 1ff00000     0 NOTYPE  GLOBAL DEFAULT    1 firmware_vector
+    28: 1ff002c8   112 FUNC    GLOBAL DEFAULT    2 sleep
+    29: 1ff00020   136 FUNC    GLOBAL DEFAULT    2 puthex
+    30: 1ff0028c    60 FUNC    GLOBAL DEFAULT    2 gtc_get_time
+    31: 1ff00434   312 FUNC    GLOBAL DEFAULT    2 sd_frame_cmd
+    32: 1ff00194    92 FUNC    GLOBAL DEFAULT    2 uart_init
+    33: 1ff00638   392 FUNC    GLOBAL DEFAULT    2 sd_spin_init_mem_card
+    34: 1ff00848   136 FUNC    GLOBAL DEFAULT    2 sd_dma_spin_write
+    35: 1ff00010     0 NOTYPE  GLOBAL DEFAULT    2 firmware_bootasm
+    36: 1ff00264    40 FUNC    GLOBAL DEFAULT    2 uart_spin_puts
+    37: 1ff000a8   236 FUNC    GLOBAL DEFAULT    2 firmware_bootmain
+    38: 1ff003a8   140 FUNC    GLOBAL DEFAULT    2 sd_init
+    39: 1ff0056c   204 FUNC    GLOBAL DEFAULT    2 sd_spin_send_cmd
+    40: 1ff00218    40 FUNC    GLOBAL DEFAULT    2 uart_spin_getbyte
+
+No version information found in this file.
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "7-A"
+  Tag_CPU_arch: v7
+  Tag_CPU_arch_profile: Application
+  Tag_ARM_ISA_use: Yes
+  Tag_THUMB_ISA_use: Thumb-2
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: small
+  Tag_CPU_unaligned_access: v6

@@ -1,4 +1,4 @@
-ENTRY(mbr)
+ENTRY(vector)
 
 MEMORY
 {
